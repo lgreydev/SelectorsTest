@@ -16,7 +16,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+//    [self testMethod];
+    
+    SEL selector1 = @selector(testMethod);
+    
+    [self performSelector:selector1];
+    
     return YES;
+}
+
+- (void) testMethod {
+    NSLog(@"testMethod");
 }
 
 
