@@ -21,14 +21,20 @@
 //    [self testMethod];
     
     SEL selector1 = @selector(testMethod);
+    SEL selector2 = @selector(testMethod:);
     
     [self performSelector:selector1];
+    [self performSelector:selector2 withObject:@"- test string"];
     
     return YES;
 }
 
 - (void) testMethod {
     NSLog(@"testMethod");
+}
+
+- (void) testMethod:(NSString*) string {
+    NSLog(@"testMethod %@", string);
 }
 
 
