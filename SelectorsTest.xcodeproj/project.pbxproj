@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E33C20E2B2DC6F3002850E3 /* SLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E33C20D2B2DC6F3002850E3 /* SLObject.m */; };
 		5EB4615F2B19F9CB00A3F1CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4615E2B19F9CB00A3F1CF /* AppDelegate.m */; };
 		5EB461622B19F9CB00A3F1CF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB461612B19F9CB00A3F1CF /* SceneDelegate.m */; };
 		5EB461652B19F9CB00A3F1CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB461642B19F9CB00A3F1CF /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E33C20C2B2DC6F3002850E3 /* SLObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLObject.h; sourceTree = SOURCE_ROOT; };
+		5E33C20D2B2DC6F3002850E3 /* SLObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLObject.m; sourceTree = SOURCE_ROOT; };
 		5EB4615A2B19F9CB00A3F1CF /* SelectorsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelectorsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB4615D2B19F9CB00A3F1CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EB4615E2B19F9CB00A3F1CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +64,8 @@
 		5EB4615C2B19F9CB00A3F1CF /* SelectorsTest */ = {
 			isa = PBXGroup;
 			children = (
+				5E33C20C2B2DC6F3002850E3 /* SLObject.h */,
+				5E33C20D2B2DC6F3002850E3 /* SLObject.m */,
 				5EB4615D2B19F9CB00A3F1CF /* AppDelegate.h */,
 				5EB4615E2B19F9CB00A3F1CF /* AppDelegate.m */,
 				5EB461602B19F9CB00A3F1CF /* SceneDelegate.h */,
@@ -149,6 +154,7 @@
 				5EB461652B19F9CB00A3F1CF /* ViewController.m in Sources */,
 				5EB4615F2B19F9CB00A3F1CF /* AppDelegate.m in Sources */,
 				5EB461702B19F9CC00A3F1CF /* main.m in Sources */,
+				5E33C20E2B2DC6F3002850E3 /* SLObject.m in Sources */,
 				5EB461622B19F9CB00A3F1CF /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

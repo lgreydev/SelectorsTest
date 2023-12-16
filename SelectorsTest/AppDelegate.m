@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SLObject.h"
 
 @interface AppDelegate ()
 
@@ -20,15 +21,26 @@
     
 //    [self testMethod];
     
-    SEL selector1 = @selector(testMethod);
-    SEL selector2 = @selector(testMethod:);
-    SEL selector3 = @selector(testMethod:parameter2:);
+    SLObject* obj = [[SLObject alloc] init];
     
+    SEL selector1 = @selector(testMethod);
+//    SEL selector2 = @selector(testMethod:);
+//    SEL selector3 = @selector(testMethod:parameter2:);
+    
+    [obj performSelector:selector1];
+    
+    NSString* secret = [obj performSelector:@selector(superSecretText)];
+    
+    NSLog(@"secret = %@", secret);
+    
+    /*
     [self performSelector:selector1];
     [self performSelector:selector2 withObject:@"- test string"];
     [self performSelector:selector3 withObject:@"string1" withObject:@"string2"];
     
     [self performSelector:selector1 withObject:nil afterDelay:5.f];
+    */
+    
     
     return YES;
 }
