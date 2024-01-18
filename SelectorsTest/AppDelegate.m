@@ -24,8 +24,8 @@
     SLObject* obj = [[SLObject alloc] init];
     
     SEL selector1 = @selector(testMethod);
-//    SEL selector2 = @selector(testMethod:);
-//    SEL selector3 = @selector(testMethod:parameter2:);
+    SEL selector2 = @selector(testMethod:);
+    SEL selector3 = @selector(testMethod:parameter2:);
     
 //    [obj performSelector:selector1];
     
@@ -41,14 +41,15 @@
     [self performSelector:selector1 withObject:nil afterDelay:5.f];
     */
     
-    [self performSelector:@selector(testMethodParametr1:) withObject:[NSNumber numberWithInt:11]];
+//    [self performSelector:@selector(testMethodParametr1:) withObject:[NSNumber numberWithInt:11]];
     
-    
+    NSString* str = NSStringFromSelector(selector1);
+    SEL sel = NSSelectorFromString(str);
     
     return YES;
 }
 
-/*
+
 - (void) testMethod {
     NSLog(@"testMethod");
 }
@@ -60,7 +61,6 @@
 - (void) testMethod:(NSString*) string parameter2:(NSString*) string2 {
     NSLog(@"testMethod: parametr2: %@, %@", string, string2);
 }
- */
 
 - (void) testMethodParametr1:(NSInteger) intValue {
     NSLog(@"testMethodParametr1: %ld", intValue);
