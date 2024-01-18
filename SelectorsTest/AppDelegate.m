@@ -43,8 +43,12 @@
     
 //    [self performSelector:@selector(testMethodParametr1:) withObject:[NSNumber numberWithInt:11]];
     
-    NSString* str = NSStringFromSelector(selector1);
-    SEL sel = NSSelectorFromString(str);
+//    NSString* str = NSStringFromSelector(selector1);
+//    SEL sel = NSSelectorFromString(str);
+    
+    NSString* str = [self testMethodParametr1:2 parametr2:3.1 parametr3:5.5];
+    
+    NSLog(@"string = %@", str);
     
     return YES;
 }
@@ -62,8 +66,9 @@
     NSLog(@"testMethod: parametr2: %@, %@", string, string2);
 }
 
-- (void) testMethodParametr1:(NSInteger) intValue {
-    NSLog(@"testMethodParametr1: %ld", intValue);
+- (NSString*) testMethodParametr1:(NSInteger) intValue parametr2:(CGFloat) floatValue parametr3:(double) doubleValue {
+    
+    return [NSString stringWithFormat:@"testMethodParametr1: %ld parametr2: %f parametr3: %f", intValue, floatValue, doubleValue];
 }
 
 
