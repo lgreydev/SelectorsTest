@@ -27,11 +27,11 @@
 //    SEL selector2 = @selector(testMethod:);
 //    SEL selector3 = @selector(testMethod:parameter2:);
     
-    [obj performSelector:selector1];
+//    [obj performSelector:selector1];
     
-    NSString* secret = [obj performSelector:@selector(superSecretText)];
+//    NSString* secret = [obj performSelector:@selector(superSecretText)];
     
-    NSLog(@"secret = %@", secret);
+//    NSLog(@"secret = %@", secret);
     
     /*
     [self performSelector:selector1];
@@ -41,10 +41,14 @@
     [self performSelector:selector1 withObject:nil afterDelay:5.f];
     */
     
+    [self performSelector:@selector(testMethodParametr1:) withObject:[NSNumber numberWithInt:11]];
+    
+    
     
     return YES;
 }
 
+/*
 - (void) testMethod {
     NSLog(@"testMethod");
 }
@@ -56,6 +60,12 @@
 - (void) testMethod:(NSString*) string parameter2:(NSString*) string2 {
     NSLog(@"testMethod: parametr2: %@, %@", string, string2);
 }
+ */
+
+- (void) testMethodParametr1:(NSInteger) intValue {
+    NSLog(@"testMethodParametr1: %ld", intValue);
+}
+
 
 #pragma mark - UISceneSession lifecycle
 
